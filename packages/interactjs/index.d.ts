@@ -34,6 +34,9 @@ declare namespace interact {
     height: number;
   }
 
+  interface Rect4 extends Rect, Rect3 {
+  }
+
   interface SnapFunction {
     ( x: number, y: number ) : SnapPosition;
   }
@@ -211,7 +214,8 @@ declare namespace interact {
     shiftKey: boolean;
     altKey: boolean;
     metaKey: boolean;
-    deltaRect: Rect;
+    rect: Rect4;
+    deltaRect: Rect4;
     // added by interact.js
     interactable: Interactable;
     interaction: any;
